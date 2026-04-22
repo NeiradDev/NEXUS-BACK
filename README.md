@@ -45,3 +45,32 @@ $ yarn run start:dev
 # production mode
 $ yarn run start:prod
 ```
+---
+
+# Desarrollo con Docker
+
+## Archivos usados
+
+### Base de datos
+- `docker-compose.yml`  
+  Levanta PostgreSQL y pgAdmin.
+
+### API
+- `Dockerfile.dev`
+- `docker-compose.dev.yml`
+- `.env.docker`
+
+---
+
+## Variables de entorno
+
+### Local
+Cuando la API corre fuera de Docker:
+
+```env
+PORT=3000
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=dev
+DB_PASSWORD=dev123
+DB_NAME=appdb
